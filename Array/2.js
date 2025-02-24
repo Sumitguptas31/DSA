@@ -7,6 +7,8 @@ function smallest(arr){
             smallestNum=arr[i]
         }
     }
+
+    
     return smallestNum
 }
 console.log(smallest([11,2,3,2,1,20]))
