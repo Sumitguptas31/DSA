@@ -1,0 +1,50 @@
+EVENT LOOP:
+
+Browser JavaScript execution flow, as well as in Node.js, is based on an event loop.
+Event loop helps to perform non blocking operations in JavaScript. it's communicate between callstack and event 
+queue. the pending task wait in the web api,then it send it to event queue,if there is no task in the
+callstack then event loop pull out the task from the event queue and send it to callstack.
+
+*stack hold the execution context.The call stack is primarily used for function invocation (call). 
+
+Example:
+const lunch = () => console.log("It's time for lunch!");
+
+const dinner = () => console.log("It's time for dinner!");
+
+const breakfast = () => {
+  console.log("Time to breakfast!");
+  setTimeout(lunch, 3000);
+  dinner();
+};
+
+breakfast();
+
+
+//thread: sequential flow of control in program is called thread
+
+*microtask queue (or job queue or microtask stack) for all
+async operations with higher priority
+(process.nextTick, Promises, Object.observe, MutationObserver)
+
+*macrotask queue (or event queue, task queue, macrotask queue)
+for all async operations with lower priority
+(setTimeout, setInterval, setImmediate, requestAnimationFrame, I/O, UI rendering)
+
+* microtask queue is almost the same as macrotask queue but those tasks
+ (process.nextTick, Promises, Object.observe, MutationObserver)
+ have higher priority than macrotasks.
+
+|=======|
+| macro |
+| [...] |
+|       |
+|=======|
+| micro |
+| [...] |
+|       |
+|=======|
+| stack |
+| [...] |
+|       |
+|=======|

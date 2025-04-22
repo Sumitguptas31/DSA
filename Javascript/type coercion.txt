@@ -1,0 +1,151 @@
+(1).Type Coercion (Type coercion, type conversion, typecasting, and type juggling)
+
+=>Type coercion in JavaScript only coerces to the string, number, and Boolean primitive types. There’s no way in JavaScript to coerce a value type to object or function.
+JavaScript has two characterized forms of coercion: implicit coercion and explicit coercion.
+Explicit coercion happens when we want to coerce the value type to a specific type. Most of the time, explicit coercion in JavaScript happens using built-in functions such as String(), Number(), and Boolean().
+
+Number:
+There are many possible ways for coercing a primitive type to a number. The Number() function coerces the value type that passes to the function, then to a number. When a type can’t be coerced to a number, the returned result is NaN.
+
+Example:
+examples of explicit coercion using the Number() function:
+Number("42"); // 42
+Number(""); // 0
+Number(true); // 1
+Number(false); // 0
+Number(null); // 0
+Number(undefined); // NaN
+
+String:
+To explicitly coerce a value to a string in JavaScript we can use the String() function. To implicitly coerce a value to a string, we can use the + operator with any operand that is a string.
+
+Example:
+String("42"); // "42"
+String(true); // "true"
+String(false); // "false"
+String(null); // "null"
+String(undefined); // "undefined"
+
+10 + "10" // "1010"
+20 + "200" // "20200"
+0.212 + "1" // "0.2121"
+
+Boolean:
+To explicitly coerce a value to Boolean in JavaScript, we can use the Boolean() function. To implicitly coerce a value to Boolean, we can use logical operators, such as ||, &&, and ! in a logical context.
+
+Example:
+Boolean('') // false
+Boolean(0) // false     
+Boolean(-0) // false
+Boolean(NaN) // false
+Boolean(null) // false
+Boolean(undefined) // false
+Boolean(false) // false
+
+true && false   // false
+true && true   // true
+true || false  // true
+true || !false  // true
+"name" || 0   // "name"
+"name" || []   // "name"
+"" || [1, 2, 3]  // [1, 2, 3]
+
+(2). Pass by Value and Pass by reference Pure Function
+
+=> primitive value include undefined, null, boolean, string, and numbers. Primitive values are passed by value in javascript.
+Whereas all objects (including functions) are passed by reference in javascript.
+In Pass by Reference, a function is called by directly passing the reference/address of the variable as the argument.
+In javascript pass by value, the function is called by directly passing the value of the variable as the argument.
+
+(3). Function Currying
+
+=> Currying is a transformation of functions that translates a function from callable as f(a, b, c) into callable as f(a)(b)(c).
+Currying doesn’t call a function. It just transforms it.
+or,
+In other terms, currying is when a function — instead of taking all arguments at one time — takes the first one and returns a new function, which takes the second one and returns a new function, which takes the third one, etc. until all arguments are completed.
+
+*Why should I use currying?
+There are several reasons why currying is ideal:
+.Currying is a checking method to make sure that you get everything you need before you proceed
+.It helps you to avoid passing the same variable again and again
+.It divides your function into multiple smaller functions that can handle one responsibility. This makes your function pure and less prone to errors and side effects
+.It is used in functional programming to create a higher-order function
+
+Example:
+*Noncurried version
+const add = (a, b, c)=>{
+    return a+ b + c
+}
+console.log(add(2, 3, 5)) // 10
+
+*Curried version
+const addCurry =(a) => {
+    return (b)=>{
+        return (c)=>{
+            return a+b+c
+        }
+    }
+}
+console.log(addCurry(2)(3)(5)) // 10
+
+
+(4).Promise
+
+=>promises are special objects that help you perform asynchronous operations. it has three states resolve,reject and pending
+
+
+
+const myPromise = new Promise((resolve, reject) => {
+  let a = false;
+  setTimeout(() => {
+    return (a) ? resolve('a is found!'): reject('sorry, no a');
+  }, 300);
+}); 
+
+myPromise
+.then(value => { console.log(value) })
+.catch(err => { console.log(err) });
+
+(5).Async Await 
+
+=>Async/Await is a syntactic sugar for promises. async return the promise.await wait till the promise is resolve or reject. We simply use async await  instead  of .then()
+
+(6). ES6 Modules
+
+=>A module is a simple or complex functionality organized in single or multiple javascript files which can be reusable again.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

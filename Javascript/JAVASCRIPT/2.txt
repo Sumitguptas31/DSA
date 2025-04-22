@@ -1,0 +1,21 @@
+What is the Event Loop?
+JavaScript runs single-threaded, meaning it can only do one thing at a time.
+But… it can still handle asynchronous tasks like setTimeout, fetch, or Promises.
+This magic happens because of the Event Loop.
+
+# How it works (in simple words):
+  1.Call Stack => Where JavaScript keeps track of the functions being executed.
+
+  2.Web APIs => Browser or Node.js handles async tasks here (like setTimeout, HTTP requests).
+
+  3.Task Queues:
+    1. Microtask Queue: For things like Promises, process.nextTick, MutationObserver. High priority!
+    2.Macrotask Queue: For things like setTimeout, setInterval, DOM events. Lower priority!
+
+Event Loop keeps checking:
+
+"Is the Call Stack empty?"
+
+Yes ➝ Handle all Microtasks first.
+
+Then pick one task from the Macrotask Queue and run it.

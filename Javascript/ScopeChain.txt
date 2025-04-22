@@ -1,0 +1,4 @@
+Scope chain:
+
+The Scope Chain is the hierarchy of scopes that will be searched in order to find a function or variable.
+code=>block scopes=>function scopes=>global scopes

@@ -1,0 +1,41 @@
+Streams:
+
+Streams are a way to handle reading/writing files, network communications, or any kind of end-to-end
+ information exchange in an efficient way.
+
+ => streams read chunks of data piece by piece, processing its content without keeping it all in memory.
+ => Using streams to process smaller chunks of data, makes it possible to read larger files.
+
+
+* Why streams
+Streams basically provide two major advantages compared to other data handling methods:
+
+(1)Memory efficiency: you don’t need to load large amounts of data in memory before you are able to process it
+(2)Time efficiency: it takes significantly less time to start processing data as soon as you have it, rather than having to wait with processing until the entire payload has been transmitted
+
+
+*There are 4 types of streams in Node.js:
+
+(1)Writable: streams to which we can write data. For example, fs.createWriteStream() lets us write data to a file using streams.
+(2)Readable: streams from which data can be read. For example: fs.createReadStream() lets us read the contents of a file.
+(3)Duplex: streams that are both Readable and Writable. For example, net.Socket
+(4)Transform: streams that can modify or transform the data as it is written and read. For example, in the instance of file-compression, you can write compressed data and read decompressed data to and from a file.
+
+=> in a Node.js based HTTP server, request is a readable stream and response is a writable stream.
+=> fs module, which lets you work with both readable and writable file streams
+
+
+***********************************************************************************************************
+
+Each type of Stream is an EventEmitter instance and throws several events at a different instance of times. For example, some of the commonly used events are −
+
+data − This event is fired when there is data is available to read.
+
+end − This event is fired when there is no more data to read.
+
+error − This event is fired when there is an error receiving or writing data.
+
+finish − This event is fired when all the data has been flushed to the underlying system
+
+
+streams is working

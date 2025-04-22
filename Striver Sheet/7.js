@@ -16,9 +16,9 @@ function RotateArray(array,D){
     // reverse the full array
     ReverseArray(array,0,n-1)
     return array
-   }
-   
-   function ReverseArray(array,i,j){
+} 
+
+function ReverseArray(array,i,j){
     while(i<=j){
        let temp=array[i]
        array[i]=array[j]
@@ -27,11 +27,7 @@ function RotateArray(array,D){
        j--
     }
     return array
-   }
-   
-   
-   
-   let arr=[1, 2, 3, 4, 5, 6]
-   
-   console.log(RotateArray(arr,2))
+}
+let arr=[1, 2, 3, 4, 5, 6]
+console.log(RotateArray(arr,2))
    

@@ -1,0 +1,17 @@
+ 1.Call apply and bind method:
+
+ **** call() Method *********************
+ Calls the function immediately
+ Passes arguments one by one
+
+
+ **** apply () Method *********************
+
+ Calls the function immediately
+ Passes arguments as an array
+
+
+
+ **** bind () Method *********************
+ Does NOT call the function immediately
+ Returns a new function with this set to what you want
