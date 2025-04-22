@@ -10,4 +10,12 @@ const promise= new Promise((resolve,reject)=>{
 })
 .then((message)=>console.log(message))
 .catch((message)=>console.log(message))
+
+//async await 
+
+const fetchData = async () => {
+    const data = await getData();
+    console.log(data);
+  };
+  
   

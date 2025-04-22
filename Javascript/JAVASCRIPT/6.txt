@@ -1,0 +1,13 @@
+=> What is Lexical Environment?
+
+A Lexical Environment is a place where variables and functions are stored when a 
+function is created or executed.
+
+It has two parts:
+Local memory – variables and functions declared in the current function.
+Reference to outer environment – variables from the outer function or global scope.
+
+
+=> Lexical scoping.
+Every function remembers where it was written in the code.Because of that,
+ it can access variables from its outer scope — this is called lexical scoping.

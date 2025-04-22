@@ -1,0 +1,34 @@
+ Execution Context (EC):
+ 
+ note:for think execution context below see
+ Execution Context = {
+   Memory Component → stores data,
+   Code Component   → runs the code
+ }
+
+JavaScript interpreter creates a new context whenever it’s about to execute a function 
+or script we’ve written.
+Every script/code starts with an execution context called a global execution context.
+And every time we call a function, a new execution context is created and is put
+ on top of the execution stack.
+
+Everything in JavaScript happens inside an "execution context".
+
+Execution context has two component
+1)memory component[variable environment] 
+-This is the place where all variables and functions are stored as key value pairs. eg-{key: value ||  n:2;} 
+
+ 2)code component[Thread of execution]
+-This is the place where code is executed one line at a time
+
+
+
+
+
+
+
+Note-
+*JavaScript is a synchronous single-threaded language
+
+-Single threaded means JavaScript can execute once command at a time
+-Synchronous single-threaded that means JavaScript can execute one command at a time in a specific order.

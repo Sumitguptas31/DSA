@@ -1,0 +1,17 @@
+Promise and async await 
+Promise=>
+ A Promise in JavaScript is an object. that represents the eventual result of
+ an asynchronous operation.
+ It’s used when something takes time to finish, like fetching data from an API,
+ reading a file, or waiting for a timer—instead of blocking the code,
+ JavaScript uses a Promise to handle the result later.
+
+Promise has 3 states:
+Pending – the operation is still going.
+Fulfilled – the operation completed successfully.
+Rejected – the operation failed with an error.
+
+=> async/await:
+async/await is syntactic sugar over Promises that allows writing asynchronous code
+in a synchronous style,
+ making it easier to read and maintain.

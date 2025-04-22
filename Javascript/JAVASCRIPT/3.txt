@@ -1,0 +1,13 @@
+Common js and ES Modules (ESM):
+=> CommonJS (CJS) — like the classic way in Node.js
+
+Uses require() to import and module.exports to export.
+It's synchronous—meaning it loads one module at a time.
+A cool feature: you can call require() anywhere in the file—even inside conditions.
+ This gives you more flexibility.
+
+ => ES Modules (ESM) — the newer standard, more modern and browser-like
+
+ Uses import and export.
+ its Asynchronous.
+ Better for performance in large-scale apps.

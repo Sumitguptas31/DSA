@@ -1,0 +1,23 @@
+ What is Temporal Dead Zone?
+
+ Temporal Dead Zone (TDZ) is the time between when a variable is declared with 
+ let or const and when it is actually initialized,
+ during which you cannot access the variable — if you try,
+ it will throw a ReferenceError.
+
+ You can't use a let or const variable before it's declared in the code
+  — doing so puts it in the TDZ.
+
+  console.log(a); // ReferenceError: Cannot access 'a' before initialization
+  let a = 10;
+
+  //*******************************************
+
+TDZ only happens with let and const, not with var.
+var gets hoisted and initialized as undefined, so it doesn’t cause a ReferenceError.
+
+console.log(x); //  undefined
+var x = 5;
+
+console.log(y); //  ReferenceError
+let y = 5;
