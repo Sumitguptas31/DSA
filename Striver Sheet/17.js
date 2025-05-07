@@ -1,5 +1,6 @@
-// Two Sum : Check if a pair with given sum exists in Array: return yes or no
+// Two Sum : Check if a pair with given sum exists in Array: return indexes
 function twoSum(n, arr, target) {
+    const ans = [-1, -1];
     const map = new Map();
 
     for (let i = 0; i < n; i++) {
@@ -7,17 +8,23 @@ function twoSum(n, arr, target) {
         const moreNeeded = target - num;
 
         if (map.has(moreNeeded)) {
-            return "YES";
+            ans[0] = map.get(moreNeeded);
+            ans[1] = i;
+            return ans;
         }
 
         map.set(num, i);
     }
-    return "NO";
+
+    return ans;
 }
-// Example usage
+
+// Example usage:
 const n = 5;
 const arr = [2, 6, 5, 8, 11];
 const target = 14;
 const ans = twoSum(n, arr, target);
 
-console.log("This is the answer for variant 1: " + ans);
+console.log(`This is the answer for variant 2: [${ans[0]}, ${ans[1]}]`);
+
+

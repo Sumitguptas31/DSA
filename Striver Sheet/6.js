@@ -1,5 +1,6 @@
 //Left rotate an array by D places
-//Note: to approach this problem we will first reverse 0 to dth element-1 of array. then dth element to last element of array . then whole array.
+//Note: to approach this problem we will first reverse 0 to dth element-1 of array.
+//  then dth element to last element of array . then whole array.
 
 function RotateArray(array,D){
  let n=arr.length;
